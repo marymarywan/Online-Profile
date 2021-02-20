@@ -11,6 +11,7 @@
     <link rel="icon" href="images/Face.png">
     <script src="https://kit.fontawesome.com/9d166393db.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v9.0" nonce="SvDphjZs"></script>
     <title>WELCOME TO ME</title>
 </head>
 <body style="padding: 20;">
@@ -111,10 +112,10 @@
         display: none;
     }
 </style>
-
+<div id="mycertification"></div>
 <h1 class="uk-heading-bullet">Certificates</h1>
 
-<div class="uk-margin-small" id="mycertification">
+<div class="uk-margin-small">
     <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center uk-margin-left uk-margin-right" uk-grid>
         <div class="uk-flex-first">
             <div class="uk-card uk-card-default uk-card-body">
@@ -183,39 +184,25 @@
 
 <h1 class="uk-heading-bullet">Gallery</h1>
 
-<h2></h2>
-<nav id='thumbs'></nav>
-<img id='viewer'>
 
-<script type="text/javascript">
-    (function (gallery_id) {
-      var title = $('h2'),
-          viewer = $('#viewer'),
-          thumbs = $('#thumbs');
-      
-      // album info
-      $.getJSON('//graph.facebook.com/' + gallery_id + '?callback=?', function(json, status, xhr) {
-        title.html('<a href="' + json.link + '">' + json.name + '</a> from ' + json.from.name);
-      });
-
-      // images
-      $.getJSON('//graph.facebook.com/' + 104081803014077 + '/photos?callback=?', function(json, status, xhr) {
-        var imgs = json.data;
-
-        viewer.attr('src', imgs[0].images[0].source)
-
-        for (var i = 0, l = imgs.length - 1; i < l; i++) {
-          $('<img src="' + imgs[i].images[3].source + '" data-fullsize="' + imgs[i].images[0].source + '">').appendTo(thumbs);
-        }
+<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fmedia%2Fset%2F%3Fset%3Da.104081803014077%26type%3D3&width=478&show_text=true&appId=848260002572758&height=515" width="478" height="515" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fmedia%2Fset%2F%3Fset%3Da.507690965986490%26type%3D3&width=478&show_text=true&appId=848260002572758&height=462" width="478" height="462" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fmedia%2Fset%2F%3Fset%3Da.602695443152708%26type%3D3&width=478&show_text=true&appId=848260002572758&height=594" width="478" height="594" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
     
-        $('img', thumbs).bind('click', function(e) {
-          e.preventDefault();
-          viewer.attr('src', $(this).attr('data-fullsize'));
-        });
-      });
-    })('426067170422'); // let's go -- put the gallery ID here
-  </script>
-
+</div>
 
 <nav class="uk-navbar-container uk-margin-large-top" uk-navbar>
     <div class="uk-navbar-center">
