@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/9d166393db.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>WELCOME TO ME</title>
+</head>
+<body>
+
+<style>
+    .nextRow {
+        display: none;
+    }
+</style>
+
+<h1 class="uk-heading-bullet">Certificates</h1>
+
+<div class="uk-margin-small" id="mycertification">
+    <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center uk-margin-left uk-margin-right" uk-grid>
+        <div class="uk-flex-first">
+            <div class="uk-card uk-card-default uk-card-body">
+               <a href="images/Certificate/1.jpg"><img src="images/Certificate/1.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/2.jpg"><img src="images/Certificate/2.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/3.jpg"><img src="images/Certificate/3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/4.jpg"><img src="images/Certificate/4.jpg" alt=""></a>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="uk-margin-small nextRow" >
+    <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center uk-margin-left uk-margin-right" uk-grid>
+        <div class="uk-flex-first">
+            <div class="uk-card uk-card-default uk-card-body">
+               <a href="images/Certificate/1.jpg"><img src="images/Certificate/1.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/2.jpg"><img src="images/Certificate/2.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/3.jpg"><img src="images/Certificate/3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <a href="images/Certificate/4.jpg"><img src="images/Certificate/4.jpg" alt=""></a>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center;" class="button1" id="btn2">
+    <button class="uk-button uk-button-default">Click</button>
+</div>
+
+<script>
+    $(".button1").click(function (){
+        $button = $(this);
+        $content = $button.prev();
+        
+        $content.slideToggle(500, function(){
+            $button.text(function(){
+                return $content.is(":visible") ? $("#btn2").css('display:block'): $("#btn2").css('display:block');
+            });
+        });
+    });
+</script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
